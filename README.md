@@ -1,5 +1,5 @@
-# Abstract {#abstract .unnumbered}
-
+# Abstract
+ 
 We propose **Adaptive Gradient-Informed Lévy Exploration (AGILE)**, an
 optimization algorithm that combines gradient descent, Lévy
 flight-inspired exploration, and an adaptive annealing schedule. AGILE
@@ -39,11 +39,15 @@ phase):
 
 3.  Determine the direction: $\mathbf{d} = -\mathbf{g}$
 
-    Alternatively, for stochasticity: $$\mathbf{d} =
+    Alternatively, for stochasticity: 
+    $$
+    \mathbf{d} =
         \begin{cases}
             -\dfrac{\mathbf{g}}{\|\mathbf{g}\|_2 + \epsilon}, & \text{if } \|\mathbf{g}\|_2 > \epsilon \\
             \mathbf{u}, & \text{otherwise}
-        \end{cases}$$ where $\epsilon > 0$ is a small constant and
+        \end{cases}
+    $$ 
+        where $\epsilon > 0$ is a small constant and
     $\mathbf{u} \sim \mathbb{S}^{d-1}$ is a random unit vector sampled
     uniformly from the unit sphere.
 
